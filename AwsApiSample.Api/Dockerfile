@@ -3,7 +3,7 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["AwsApiSample.Api/AwsApiSample.Api.csproj", "AwsApiSample.Api/"]
+COPY ["./AwsApiSample.Api.csproj", "AwsApiSample.Api/"]
 RUN dotnet restore "AwsApiSample.Api/AwsApiSample.Api.csproj"
 COPY . .
 WORKDIR "/src/AwsApiSample.Api"
